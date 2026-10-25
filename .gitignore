@@ -1,0 +1,9 @@
+build/
+__pycache__/
+.DS_Store
+*.o
+.cache/
+
+# Reference ember for instructors: local only, never published to students.
+# Students check their machine against CHECKS.md and checks/.
+reference/
