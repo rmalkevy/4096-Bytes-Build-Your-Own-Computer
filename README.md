@@ -45,7 +45,8 @@ gives you the language you need for Lab 1, and Lab 1 itself starts from a
 | **Total** | **100** | KAI scale: 90–100 A; 82–89 B; 75–81 C; 67–74 D; 60–66 E; below 60 — fail. To be admitted to the differentiated credit (zalik), all eight labs must be defended. |
 
 "Якщо встигаєте" is the optional part of every lab and is worth 2 points; it and the
-tests are what separate "good" from "excellent".
+tests are what separate "good" from "excellent". If the section has several tasks, one of
+the student's choice is enough for the 2 points; the rest are for fun.
 
 AI assistants are allowed: understanding is graded, not code. Why — in
 [DEFENSE.md](DEFENSE.md) and [the section below](#ai-assistants).
