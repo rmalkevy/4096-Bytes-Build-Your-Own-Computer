@@ -38,7 +38,7 @@ cd courses/programming-fundamentals/practice/lab-08-practice
 | Файл | Запуск | Що показує | Розділ |
 |---|---|---|---|
 | `01-chars` | `./run.sh 01 'LOADI A, 0x41 ; коментар'`, потім `'ADD A, B'` | рядок — це байти; кожен байт, його клас і куди піде `lex()`, якщо курсор стоїть на ньому; що побачив би `step`, якби читав текст напряму | Теорія §1, Notes §1 · панель 2 |
-| `02-lex` | `./run.sh 02 'loop: JMP loop'`, потім `bad.asm`, `hello.asm` | каркас лексера з M1 дослівно, разом із заглушкою `number()`: токени з номерами рядків і вивід як у [CHECKS.md](../../CHECKS.md#lab-8); `line 3: unexpected character '@'`; перше ж число — `line 2: number() is not written yet` | Теорія §1, M1, Notes §1–2 · панель 2 |
+| `02-lex` | `./run.sh 02 'loop: JMP loop'`, потім `bad.asm`, `hello.asm` | каркас лексера з M1 дослівно, разом із заглушкою `number()`: токени з номерами рядків і вивід як у [CHECKS.md](../../CHECKS.md#lab-8--checkslab-08txt); `line 3: unexpected character '@'`; перше ж число — `line 2: number() is not written yet` | Теорія §1, M1, Notes §1–2 · панель 2 |
 | `03-silent-zero` | `./run.sh 03`, потім свої рядки | `atoi`, `strtol`, `stoi` на `0xGG`, `0x`, `12ab`, `010`: беруть «скільки вийде» і мовчать про решту | M1, Notes §2 |
 | `04-token-list` | `./run.sh 04 ADD A B`, потім `./run.sh 04 leak ADD A B` | список із Notes §3: `head`, `tail` і адреса кожного вузла після кожного `append`; обхід через `next`; витік, якщо не викликати `destroy` | Теорія §3, Notes §3 · панель 3 |
 | `05-encode` | `./run.sh 05 JMP 0x0123`, `HALT`, потім `LOADI A, 300` | одна інструкція → опкод і операнд, 16 бітів молодшим уперед: `30 23 01` і `00` з CHECKS.md; `300` мовчки стає `0x2C` | M2, ISA §4 · панель 4 |

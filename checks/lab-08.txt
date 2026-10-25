@@ -1,0 +1,7 @@
+lex checks/lab-08/loop.asm
+lex checks/lab-08/bad-number.asm
+asm checks/lab-08/halt.asm
+asm checks/lab-08/jmp.asm
+asm checks/lab-08/forward.asm
+asm checks/lab-08/fact.asm
+quit
