@@ -161,7 +161,7 @@ done:  HALT
 | `hello.asm` | `OUT` / `OUTS` | обов'язково |
 | `search.asm` | цикл Lab 4 читається людьми | обов'язково |
 | `fib.asm` | рекурсія на `CALL`/`RET` з Lab 7; `fib(6)` = `8` | обов'язково |
-| `bounce.asm` | `PLOT` з Lab 5 | Advanced |
+| `bounce.asm` | `PLOT` з Lab 5 | «Якщо встигаєте» |
 
 `search.asm` поклади в README поруч із шістнадцятковими байтами, які набивав у Lab 4. Ця різниця — і є
 відповідь на питання «навіщо мова».
