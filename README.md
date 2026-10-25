@@ -41,7 +41,7 @@ gives you the language you need for Lab 1, and Lab 1 itself starts from a
 | Part | Points | How it is counted |
 |---|---|---|
 | 8 labs × 10 | 80 | Checklist done and defended — **8**; plus the "Якщо встигаєте" (*if you have time*) section — **10**. The defense does not add points, it confirms them. Fail it and lose 2 (once per lab), with a second defense a week later; if needed, one more, with no further penalty. The last defense day is in week 16. A lab without a defense does not count. How the defense runs: [DEFENSE.md](DEFENSE.md). |
-| 2 written tests × 10 | 20 | 45 minutes, on paper, no computer. Trace a 10–15-byte program with a table of registers and flags — **4**; "the instructor broke it": predict what a changed instruction does — **3**; encode an instruction or write five lines of assembly — **3**. |
+| 2 written tests × 10 | 20 | 45 minutes, on paper, no computer. Trace a 10–15-byte program with a table of registers and flags — **4**; "the instructor broke it": predict what a changed instruction does — **3**; encode an instruction or write five lines of assembly — **3**. Format and sample papers: [MKR.md](MKR.md) (in Ukrainian). |
 | **Total** | **100** | KAI scale: 90–100 A; 82–89 B; 75–81 C; 67–74 D; 60–66 E; below 60 — fail. To be admitted to the differentiated credit (zalik), all eight labs must be defended. |
 
 "Якщо встигаєте" is the optional part of every lab and is worth 2 points; it and the
