@@ -40,9 +40,12 @@ gives you the language you need for Lab 1, and Lab 1 itself starts from a
 
 | Part | Points | How it is counted |
 |---|---|---|
-| 8 labs × 10 | 80 | The level sets the lab's points: **Basic 7, Standard 8, Advanced 10**. The defense does not add points, it confirms them: fail it and lose 2, with a second defense a week later. A lab without a defense does not count. How the defense runs: [DEFENSE.md](DEFENSE.md). |
+| 8 labs × 10 | 80 | Checklist done and defended — **8**; plus the "Якщо встигаєте" (*if you have time*) section — **10**. The defense does not add points, it confirms them. Fail it and lose 2 (once per lab), with a second defense a week later; if needed, one more, with no further penalty. The last defense day is in week 16. A lab without a defense does not count. How the defense runs: [DEFENSE.md](DEFENSE.md). |
 | 2 written tests × 10 | 20 | 45 minutes, on paper, no computer. Trace a 10–15-byte program with a table of registers and flags — **4**; "the instructor broke it": predict what a changed instruction does — **3**; encode an instruction or write five lines of assembly — **3**. |
-| **Total** | **100** | KAI scale: 90–100 A; 82–89 B; 75–81 C; 67–74 D; 60–66 E; below 60 — fail. To be admitted to the final credit, all eight labs must be defended. |
+| **Total** | **100** | KAI scale: 90–100 A; 82–89 B; 75–81 C; 67–74 D; 60–66 E; below 60 — fail. To be admitted to the differentiated credit (zalik), all eight labs must be defended. |
+
+"Якщо встигаєте" is the optional part of every lab and is worth 2 points; it and the
+tests are what separate "good" from "excellent".
 
 AI assistants are allowed: understanding is graded, not code. Why — in
 [DEFENSE.md](DEFENSE.md) and [the section below](#ai-assistants).
@@ -82,10 +85,10 @@ C++ is the glass: a small subset (types, functions, structs, pointers) so you ca
 ## Relationship to Programming Fundamentals
 
 This course grew out of Programming Fundamentals ([Programming-Practice-Projects](https://github.com/rmalkevy/Programming-Practice-Projects)).
-Students who already built `ember` in their first year take the labs in a compressed
-mode and aim for Advanced: a disassembler, an AST and macros ([Lab 8](lab-08-give-it-a-language.md#якщо-встигаєте)),
-a timer and interrupts ([ISA.md §2](ISA.md#output-port-and-timer-opt-lab-5)),
-and the comparison with microcontrollers in [HARDWARE.md](HARDWARE.md) (in Ukrainian).
+Students who already built `ember` in their first year go through the same labs faster
+and spend the time saved on "Якщо встигаєте": a disassembler, an AST, macros
+([Lab 8](lab-08-give-it-a-language.md#якщо-встигаєте)), a timer
+([ISA.md §2](ISA.md#output-port-and-timer-opt-lab-5)), [HARDWARE.md](HARDWARE.md) (in Ukrainian).
 
 ---
 
@@ -201,15 +204,14 @@ Each lab is **two weeks**, checked at the end of that window. Eight defenses acr
 Every lab has the same shape:
 
 1. **Терміни цієї лаби** — the 5–8 terms it introduces, Ukrainian and English.
-2. **Про що ця лаба** — what you'll master and why it matters beyond this project.
+2. **Про що ця лаба** — what you'll master, why it matters beyond this project, and roughly how long it takes.
 3. **Notes** — a short companion: theory, paste-ready snippets, expected output. Use it in class or alone; it does not replace the lab.
 4. **Теорія** — the mental model, what's under the hood, pitfalls, *prove-it-to-yourself* experiments. This is the reading.
 5. **Крок проєкту** — what to add to `ember`, with milestones and a definition of done.
-6. **Рівні** — Basic / Standard / Advanced, with honest hour estimates. Pick a landing spot before you start; Basic is a real, passing lab.
-7. **Чекліст здачі** — the deliverable checklist.
-8. **На захисті** — explain it at the whiteboard.
-9. **Якщо встигаєте** — optional, when you're ahead.
-10. **Що почитати й подивитись** — a few talks and chapters, each with one line on *why this one*.
+6. **Чекліст здачі** — the deliverable checklist.
+7. **На захисті** — explain it at the whiteboard.
+8. **Якщо встигаєте** — optional, when you're ahead.
+9. **Що почитати й подивитись** — a few talks and chapters, each with one line on *why this one*.
 
 (The lab files are in Ukrainian. The section names above are the headings you will
 actually see; this list is here so an English reader can navigate them.)
@@ -222,7 +224,7 @@ and every repetition reads as new information until they work out that it isn't.
 
 | Thing | Home |
 |---|---|
-| terms, theory, milestones, levels, checklist, defense questions | **the lab** |
+| terms, theory, milestones, time estimate, checklist, defense questions | **the lab** |
 | semester plan, points, grading | [this README](#grading) |
 | code snippets, the build line, expected output, "if you're short on time" | **the notes** |
 | memory map, instruction set, calling convention | [ISA.md](ISA.md) |
@@ -236,31 +238,16 @@ The lab says **what you should come away with** from each experiment; the notes 
 the experiment. That is why "Перевірте самі" in a lab is a table of takeaways, not a
 second copy of the code.
 
-### A note on Levels, because the cohort is not uniform
+### Time and given code
 
-Elective groups arrive split across specialties and years: some write C++ every
-day, some have only seen Python. This course handles that with the **Levels**, not with two syllabuses.
-
-- **Basic** is a complete, passing lab. It is sized so that someone seeing C++
-  for the first time can reach it in about **4–5 hours a week**, using the given code.
-  A student who lands on Basic for all eight labs has still built a working
-  virtual computer and should be told so.
-- **Standard** is the target, about **6–7 hours a week**. This is where the
-  course's claims get earned: the traces, the explanations, the README.
-- **Advanced** exists so the experienced students have somewhere to go. It is
-  deliberately *the same machine, harder* — never "do an extra lab." That keeps
-  the group defending one artifact in one vocabulary.
-
-Across all eight labs that is roughly **62–78 hours** at Basic and **102–118** at
-Standard. On a fixed 16-week semester, plan the group around Standard and expect
-a real tail at Basic.
+Every lab has a time estimate (at the end of "Про що ця лаба") and an optional
+"Якщо встигаєте" section. Across all eight labs that is roughly **102–118 hours**.
 
 Some work is **given as code you read rather than write** — Lab 1's prompt and
 dump, Lab 2's `cpu.hpp`, `step()` shape and `reg` command, Lab 3's `get16`, Lab 5's `show()`, Lab 7's `fact` listing, Lab 8's lexer skeleton and token
 list. In every case what is given is scaffolding and what is left is the lab's
 actual idea. Reading working code is a skill the course teaches on purpose.
 
-How a Level turns into points: [Grading](#grading).
 
 ---
 
