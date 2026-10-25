@@ -1,12 +1,51 @@
-# Programming Fundamentals — Build a Computer You Can See
+# 4096 Bytes: Build Your Own Computer
+
+*4096 байтів: збираємо власний комп'ютер*
 
 [English](README.md) · [Українською](README.uk.md)
 
 > "The computer is a machine that moves bits. Types, names, and languages are stories we tell about those bits so we can think."
 
-A 16-week, 8-lab course for **first-year** students. You do not need to have programmed before — [week 0](setup.notes.md) installs the tools, [C++ за годину](cpp-survival-kit.notes.md) gives you the language you need for Lab 1, and Lab 1 itself starts from a [working skeleton](starter/README.md), not an empty file. Across the semester you build **one machine**: a tiny virtual computer. By Lab 8 you write programs *for* it in a language *you* scanned and assembled. A recruiter can clone the repo, run one command, and see the dump, the pixels, and a Fibonacci that lives on a stack you implemented.
+**16 weeks, eight labs.** Across the semester you build **one machine**: a tiny virtual computer. By Lab 8 you write programs *for* it in a language *you* scanned and assembled. A recruiter can clone the repo, run one command, and see the dump, the pixels, and a Fibonacci that lives on a stack you implemented.
 
 The working name of that machine is **`ember`**. It is not a library and not a programming language — it is the program *you* write, named so every lab can point at the same thing. Call your repo whatever you like. Everyone builds the same machine: memory, registers, a display, an assembler. What differs is the README, extra opcodes if you want them, and the programs you write for it.
+
+---
+
+## Who it is for
+
+An elective at KAI for 2nd–4th year students of every specialty in the faculty.
+**4 ECTS credits, 16 weeks.**
+
+Some programming experience in any language is recommended. C/C++ is not required:
+[week 0](setup.notes.md) installs the tools, [C++ за годину](cpp-survival-kit.notes.md)
+gives you the language you need for Lab 1, and Lab 1 itself starts from a
+[working skeleton](starter/README.md), not an empty file.
+
+## Semester plan
+
+| Week | What |
+|---|---|
+| 0 | [Tools, terminal and git](setup.notes.md), [C++ за годину](cpp-survival-kit.notes.md) |
+| 1–2 | [Lab 1](lab-01-a-box-of-bytes.md) |
+| 3–4 | [Lab 2](lab-02-bits-dont-lie.md) |
+| 5–6 | [Lab 3](lab-03-addresses-not-names.md) |
+| 7–8 | [Lab 4](lab-04-the-shape-of-control.md) |
+| 9–10 | [Lab 5](lab-05-many-of-one-thing.md); **Test 1** in week 9, after Lab 4 |
+| 11–12 | [Lab 6](lab-06-named-bundles.md) |
+| 13–14 | [Lab 7](lab-07-call-and-return.md) |
+| 15–16 | [Lab 8](lab-08-give-it-a-language.md); **Test 2** in week 16, after Lab 8 |
+
+## Grading
+
+| Part | Points | How it is counted |
+|---|---|---|
+| 8 labs × 10 | 80 | The level sets the lab's points: **Basic 7, Standard 8, Advanced 10**. The defense does not add points, it confirms them: fail it and lose 2, with a second defense a week later. A lab without a defense does not count. How the defense runs: [DEFENSE.md](DEFENSE.md). |
+| 2 written tests × 10 | 20 | 45 minutes, on paper, no computer. Trace a 10–15-byte program with a table of registers and flags — **4**; "the instructor broke it": predict what a changed instruction does — **3**; encode an instruction or write five lines of assembly — **3**. |
+| **Total** | **100** | KAI scale: 90–100 A; 82–89 B; 75–81 C; 67–74 D; 60–66 E; below 60 — fail. To be admitted to the final credit, all eight labs must be defended. |
+
+AI assistants are allowed: understanding is graded, not code. Why — in
+[DEFENSE.md](DEFENSE.md) and [the section below](#ai-assistants).
 
 ---
 
@@ -25,9 +64,9 @@ Work happens in the **terminal**: you compile with `c++` / `cmake`, you talk to 
 
 ## What we drew on
 
-This course sits in the same family as the [Python](../python/README.md) and [JavaScript](../javascript/README.md) courses in this repository: **one project, eight two-week labs**, theory that exists because the next feature needs it, notes you can run on a pair of screens, a five-minute defense instead of a paper exam.
+This course sits in the same family as the Python and JavaScript courses in [Programming-Practice-Projects](https://github.com/rmalkevy/Programming-Practice-Projects): **one project, eight two-week labs**, theory that exists because the next feature needs it, notes you can run on a pair of screens, a five-minute defense after every lab.
 
-The wider [42-lab program](../../README.md) — and behind it [École 42](https://42.fr/) — is the posture: you learn by shipping something you can demo, not by collecting completed worksheets.
+The wider [42-lab program](https://github.com/rmalkevy/Programming-Practice-Projects) in that repository — and behind it [École 42](https://42.fr/) — is the posture: you learn by shipping something you can demo, not by collecting completed worksheets.
 
 For the *machine* itself we borrowed freely:
 
@@ -37,6 +76,16 @@ For the *machine* itself we borrowed freely:
 - **[Crafting Interpreters](https://craftinginterpreters.com/)** (Bob Nystrom) — Lab 8's attitude: a language begins as a scanner that turns text into tokens, then into bytes the CPU already understood.
 
 C++ is the glass: a small subset (types, functions, structs, pointers) so you can *see* the bytes. It is not a tour of the whole language.
+
+---
+
+## Relationship to Programming Fundamentals
+
+This course grew out of Programming Fundamentals ([Programming-Practice-Projects](https://github.com/rmalkevy/Programming-Practice-Projects)).
+Students who already built `ember` in their first year take the labs in a compressed
+mode and aim for Advanced: a disassembler, an AST and macros ([Lab 8](lab-08-give-it-a-language.md#якщо-встигаєте)),
+a timer and interrupts ([ISA.md §2](ISA.md#output-port-and-timer-opt-lab-5)),
+and the comparison with microcontrollers in [HARDWARE.md](HARDWARE.md) (in Ukrainian).
 
 ---
 
@@ -141,14 +190,7 @@ The machine's reference — memory map, instruction set, calling convention — 
 | 7 | [Call and Return](lab-07-call-and-return.md) | [notes](lab-07-call-and-return.notes.md) · [diagram](img/calls.svg) | Functions, value vs pointer, the call stack, recursion, headers | `SP`, `PUSH`/`POP`, `Stack` ADT, `CALL`/`RET`, recursive factorial |
 | 8 | [Give It a Language](lab-08-give-it-a-language.md) | [notes](lab-08-give-it-a-language.notes.md) · [diagram](img/language.svg) | Tokens, scanners, linked lists, ADTs, syntax errors | A lexer + assembler; `hello`, `search`, `fib` as `.asm` |
 
-Each lab is **two weeks**, checked at the end of that window. Eight defenses across the semester, not one showcase in week 16.
-
-| Weeks | Lab | Weeks | Lab |
-|---|---|---|---|
-| 1–2 | Lab 1 | 9–10 | Lab 5 |
-| 3–4 | Lab 2 | 11–12 | Lab 6 |
-| 5–6 | Lab 3 | 13–14 | Lab 7 |
-| 7–8 | Lab 4 | 15–16 | Lab 8 |
+Each lab is **two weeks**, checked at the end of that window. Eight defenses across the semester, not one showcase in week 16. The weeks are in the [semester plan](#semester-plan).
 
 **The labs and the notes are written in Ukrainian**, because the students are. This README is the English entry point to the repository; the machine reference has both an [English](ISA.md) and a [Ukrainian](ISA.uk.md) version.
 
@@ -156,7 +198,7 @@ Each lab is **two weeks**, checked at the end of that window. Eight defenses acr
 
 ## What each lab looks like
 
-Same shape as the Python and JavaScript courses:
+Every lab has the same shape:
 
 1. **Терміни цієї лаби** — the 5–8 terms it introduces, Ukrainian and English.
 2. **Про що ця лаба** — what you'll master and why it matters beyond this project.
@@ -175,12 +217,13 @@ actually see; this list is here so an English reader can navigate them.)
 ### What lives where, so nothing is read twice
 
 Every thing has one home. If the other file needs it, it links rather than copies.
-This is not tidiness for its own sake: a first-year reads both files back to back,
+This is not tidiness for its own sake: a student reads both files back to back,
 and every repetition reads as new information until they work out that it isn't.
 
 | Thing | Home |
 |---|---|
 | terms, theory, milestones, levels, checklist, defense questions | **the lab** |
+| semester plan, points, grading | [this README](#grading) |
 | code snippets, the build line, expected output, "if you're short on time" | **the notes** |
 | memory map, instruction set, calling convention | [ISA.md](ISA.md) |
 | the numbers to check against | [CHECKS.md](CHECKS.md) |
@@ -195,11 +238,11 @@ second copy of the code.
 
 ### A note on Levels, because the cohort is not uniform
 
-First-year groups arrive split: some wrote code at school, some have never opened
-a terminal. This course handles that with the **Levels**, not with two syllabuses.
+Elective groups arrive split across specialties and years: some write C++ every
+day, some have only seen Python. This course handles that with the **Levels**, not with two syllabuses.
 
-- **Basic** is a complete, passing lab. It is sized so that someone who has never
-  programmed can reach it in about **4–5 hours a week**, using the given code.
+- **Basic** is a complete, passing lab. It is sized so that someone seeing C++
+  for the first time can reach it in about **4–5 hours a week**, using the given code.
   A student who lands on Basic for all eight labs has still built a working
   virtual computer and should be told so.
 - **Standard** is the target, about **6–7 hours a week**. This is where the
@@ -217,19 +260,7 @@ dump, Lab 2's `cpu.hpp`, `step()` shape and `reg` command, Lab 3's `get16`, Lab 
 list. In every case what is given is scaffolding and what is left is the lab's
 actual idea. Reading working code is a skill the course teaches on purpose.
 
-The three Levels map onto the program-wide rubric in [`INSTRUCTOR_HANDBOOK.md`](../../INSTRUCTOR_HANDBOOK.md) §6: Basic passes, Standard is the target, Advanced is distinction.
-
-### Two tracks: the project and the Sandbox
-
-Next to every lab sits a **Sandbox** file (`lab-0N-….sandbox.md`, in Ukrainian) — a
-simpler variant for students who cannot build the machine yet. There is no project:
-six independent 30–50-minute tasks on the same theory. Each has two halves: predict what
-a short ready program prints, then write 5–15 lines of your own code, with the expected
-output given for self-checking. Missing one task does not block the next. The Levels are the same —
-Basic / Standard / Advanced — and weigh the same.
-
-Students choose a track **once, at the start of the semester**: `ember` grows from lab
-to lab, so it cannot be joined midway.
+How a Level turns into points: [Grading](#grading).
 
 ---
 
@@ -271,8 +302,6 @@ moves by the wrong amount, carry comes from the wrong bit, bytes land in the
 wrong order — exactly the bugs a trace and the checks catch. And passing the
 checks does not mean correct: [DEFENSE.md](DEFENSE.md#lab-2--біти-не-брешуть)
 (Lab 2, break 4) has a broken `step` that almost passes them.
-
-The program-wide rules are in the [repository README](../../README.md#using-ai-assistants).
 
 ---
 
