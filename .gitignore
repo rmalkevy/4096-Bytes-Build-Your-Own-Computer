@@ -7,3 +7,6 @@ __pycache__/
 # Reference ember for instructors: local only, never published to students.
 # Students check their machine against CHECKS.md and checks/.
 reference/
+
+# Editor settings: c_cpp_properties.json holds one Mac's SDK path.
+.vscode/
