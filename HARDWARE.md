@@ -26,7 +26,7 @@
 буквально залізо, на якому літають.
 
 Цей курс не робить з вас embedded-розробника за 16 тижнів. Він дає фундамент, без
-якого ним не стати, а далі в цьому репозиторії є прямий шлях до прошивок і дронів
+якого ним не стати, а далі в репозиторії [Programming-Practice-Projects](https://github.com/rmalkevy/Programming-Practice-Projects) є прямий шлях до прошивок і дронів
 (див. [кінець сторінки](#куди-далі)).
 
 ---
@@ -100,7 +100,7 @@ volatile std::uint32_t* odr = (volatile std::uint32_t*)0x40020014;
 
 Вихід за межі масиву в прошивці — це не просто звіт ASan. У пристрої, який
 приймає дані по радіо, це вразливість: хтось надішле довший пакет і перепише
-пам'ять. Про це — [Lab 38](../../labs/lab-38-binary-exploitation.md) цього репозиторію.
+пам'ять. Про це — [Lab 38](https://github.com/rmalkevy/Programming-Practice-Projects/blob/main/labs/lab-38-binary-exploitation.md) у [Programming-Practice-Projects](https://github.com/rmalkevy/Programming-Practice-Projects).
 
 ## Lab 4 — [форма керування](lab-04-the-shape-of-control.md)
 
@@ -175,9 +175,9 @@ MISRA C не дозволяє `malloc` і `free`. Пам'ять виділяют
 
 ## Куди далі
 
-У цьому репозиторії є два треки, які продовжують цей курс прямо в залізо:
+У репозиторії [Programming-Practice-Projects](https://github.com/rmalkevy/Programming-Practice-Projects) є два треки, які продовжують цей курс прямо в залізо:
 
-- **Трек A — оборона, авіація, дрони:** [04 Embedded Sensor Logger](../../labs/lab-04-stm32-sensor-logger.md) (перша прошивка) → [17 PID Self-Balancer](../../labs/lab-17-pid-self-balancer.md) (перший контур керування) → [35 RTOS Mini-Autopilot](../../labs/lab-35-rtos-mini-autopilot.md) (перша система реального часу) → [37 PX4 + MAVLink](../../labs/lab-37-px4-mavlink-drone-stack.md) (перша автономна місія) → [40 Drone-Link Security](../../labs/lab-40-network-wireless-drone-security.md) (захищений канал).
-- **Трек E — embedded і системне програмування:** [04](../../labs/lab-04-stm32-sensor-logger.md) → [16 Smart Telemetry Beacon](../../labs/lab-16-smart-telemetry-beacon.md) → [19 Custom Game Controller](../../labs/lab-19-custom-game-controller.md) → [35](../../labs/lab-35-rtos-mini-autopilot.md) → [36 Embedded Linux](../../labs/lab-36-embedded-linux-from-inside.md).
+- **Трек A — оборона, авіація, дрони:** [04 Embedded Sensor Logger](https://github.com/rmalkevy/Programming-Practice-Projects/blob/main/labs/lab-04-stm32-sensor-logger.md) (перша прошивка) → [17 PID Self-Balancer](https://github.com/rmalkevy/Programming-Practice-Projects/blob/main/labs/lab-17-pid-self-balancer.md) (перший контур керування) → [35 RTOS Mini-Autopilot](https://github.com/rmalkevy/Programming-Practice-Projects/blob/main/labs/lab-35-rtos-mini-autopilot.md) (перша система реального часу) → [37 PX4 + MAVLink](https://github.com/rmalkevy/Programming-Practice-Projects/blob/main/labs/lab-37-px4-mavlink-drone-stack.md) (перша автономна місія) → [40 Drone-Link Security](https://github.com/rmalkevy/Programming-Practice-Projects/blob/main/labs/lab-40-network-wireless-drone-security.md) (захищений канал).
+- **Трек E — embedded і системне програмування:** [04](https://github.com/rmalkevy/Programming-Practice-Projects/blob/main/labs/lab-04-stm32-sensor-logger.md) → [16 Smart Telemetry Beacon](https://github.com/rmalkevy/Programming-Practice-Projects/blob/main/labs/lab-16-smart-telemetry-beacon.md) → [19 Custom Game Controller](https://github.com/rmalkevy/Programming-Practice-Projects/blob/main/labs/lab-19-custom-game-controller.md) → [35](https://github.com/rmalkevy/Programming-Practice-Projects/blob/main/labs/lab-35-rtos-mini-autopilot.md) → [36 Embedded Linux](https://github.com/rmalkevy/Programming-Practice-Projects/blob/main/labs/lab-36-embedded-linux-from-inside.md).
 
-Як обрати — [TRACK_PICKER.md](../../TRACK_PICKER.md).
+Як обрати — [TRACK_PICKER.md](https://github.com/rmalkevy/Programming-Practice-Projects/blob/main/TRACK_PICKER.md).
